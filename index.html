@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Probe 06.02.2026</title>
+</head>
+
+<body>
+
+  <section>
+    <!-- Das ist ein Kommentar, der wird nicht angezeigt. -->
+    <!-- Anker für den Seitenanfang -->
+    <a id="top"></a>
+    <!-- Button zum Footer -->
+    <p>
+      <a href="#footer">
+        <button>Zum Footer</button>
+      </a>
+    </p>
+  </section>
+
+  <section id="top">
+    <h1>Hallo Welt!</h1>
+    <p>
+      Mein name ist Míriam.<br>
+      Ich bin Student im Bereich Full-Stack-Webentwicklung und lerne gerade HTML5.
+    </p>
+    <p>Springe zum nächsten Absatz.</p>
+  </section>
+
+  <section>
+    <h2>Textformatierung</h2>
+    <p>
+      <i>Dieser Text ist kursiv, cursiva.</i><br>
+      <b>Dieser Text ist fett, negrita.</b><br>
+      <u>Dieser Text ist unterstrichen, subrayado.</u><br>
+    </p>
+    <p>Dies ist ein <b>fetter</b>, <i>kursiver</i> und <u>unterstrichener</u> Text.</p>
+  </section>
+
+  <section>
+    <h2>Links</h2>
+    <p>Hier ist ein Link zu <a href="https://www.google.com">Google</a>.</p>
+    <p>Hier ist ein InternLink <a href="#section1">Springe zu Abschnitt 1</a>.</p>
+  </section>
+
+  <section>
+    <h2>Bilder</h2>
+    <p>Hier ist ein Bild:</p>
+
+    <a href="index.html" title="Logo DBE">
+      <img src="bild.jpg" alt="Logo">
+    </a>
+
+    <p>Ich kann auch width und height kontrollieren: width="300" height="200".</p>
+  </section>
+
+  <section>
+    <h2>Konzepte und Elemente</h2>
+    <h3>Liste (ul)</h3>
+    <ul>
+      <li>"!DOCTYPE html" Sagt dem Browser, das ist eine HTML-Datei.</li>
+      <li>"html" Start der Webseite, alles kommt zwischen "html" und "/html".</li>
+      <li>"head" Informationen für den Browser: Man sieht diesen Teil nicht auf der Seite.</li>
+      <li>"meta charset=&quot;UTF-8&quot;" Erlaubt Umlaute und Sonderzeichen.</li>
+      <li>"title" Text oben im Browser-Tab: Nicht Inhalt der Seite.</li>
+      <li>"body" Alles was man sieht: Hier kommt der Inhalt, wie Text, Bilder, Links, Buttons...</li>
+    </ul>
+
+    <h3>Liste (ol)</h3>
+    <ol>
+      <li>Erstes Element</li>
+      <li>Zweites Element</li>
+      <li>Drittes Element</li>
+    </ol>
+
+    <h3>Definitionsliste (dl)</h3>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Eine Markup-Sprache zur Strukturierung von Webseiten.</dd>
+      <dt>CSS</dt>
+      <dd>Eine Stylesheet-Sprache zur Gestaltung von Webseiten.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Tabellen</h2>
+
+    <h3>Tabelle 1</h3>
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Alter</th>
+        <th>Stadt</th>
+      </tr>
+      <tr>
+        <td>Míriam</td>
+        <td>25</td>
+        <td>Cochem</td>
+      </tr>
+      <tr>
+        <td>Alina</td>
+        <td>23</td>
+        <td>Valencia</td>
+      </tr>
+    </table>
+
+    <h3>Tabelle 2</h3>
+    <table border="1">
+      <caption>Monatsausgaben</caption>
+      <tr>
+        <th>Monat</th>
+        <th>Ausgaben</th>
+      </tr>
+      <tr>
+        <td>Januar</td>
+        <td>$500</td>
+      </tr>
+      <tr>
+        <td>Februar</td>
+        <td>$600</td>
+      </tr>
+    </table>
+
+    <h3>Erklärung (Tabellen-Tags)</h3>
+    <ul>
+      <li>"table": Definiert deine gesamte Tabelle.</li>
+      <li>"tr": Definiert eine Tabellenzeile (table row).</li>
+      <li>"th": Definiert eine Tabellenkopf-Zelle (table header).</li>
+      <li>"td": Definiert eine Tabellen-Datenzelle (table data).</li>
+      <li>"caption": Fügt deiner Tabelle eine Überschrift hinzu.</li>
+    </ul>
+  </section>
+
+  <section id="section1">
+    <h2>Abschnitt 1</h2>
+    <p>Dies ist der Inhalt von Abschnitt 1.</p>
+  </section>
+
+  <section>
+    <h2>Responsive Bilder: picture</h2>
+
+    <h3>Beispiel</h3>
+    <picture>
+      <source media="(min-width:800px)" srcset="bild-gross.jpg">
+      <source media="(min-width:450px)" srcset="bild-mittel.jpg">
+      <img src="bild-klein.jpg" alt="Beschreibung des Bildes">
+    </picture>
+
+    <h3>Erklärung</h3>
+    <ul>
+      <li>Das "picture" <b>Element</b> ermöglicht mehrere Bildquellen für verschiedene Bildschirmgrößen.</li>
+      <li>Die "source" <b>Elemente</b> definieren Bedingungen für die Anzeige.</li>
+      <li>Das "img" <b>Element</b> dient als Fallback.</li>
+      <li>"bild-gross.jpg" wird geladen, wenn der Bildschirm mindestens 800px breit ist.</li>
+      <li>"bild-mittel.jpg" wird für Bildschirme mit mindestens 450px verwendet.</li>
+      <li>"bild-klein.jpg" dient als Fallback.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>srcset</h2>
+
+    <p>
+      Das "srcset" <b>Attribut</b> erlaubt es, mehrere Bildquellen mit unterschiedlichen Auflösungen anzugeben.
+    </p>
+
+    <h3>Beispiel (1x / 2x)</h3>
+    <img src="bild-klein.jpg" srcset="bild-klein.jpg 1x, bild-gross.jpg 2x" alt="Beispiel für srcset">
+
+    <p>
+      In diesem Beispiel wird "bild-klein.jpg" für normale Displays verwendet, während "bild-gross.jpg"
+      für hochauflösende Displays geladen wird.
+    </p>
+
+    <h3>Beispiel mit Breiten (w) + sizes</h3>
+    <img
+      src="bild.jpg"
+      srcset="bild-klein.jpg 480w, bild-mittel.jpg 800w, bild-gross.jpg 1200w"
+      sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+      alt="Beispiel für srcset mit Auflösungen"
+    >
+
+    <p>
+      Das "sizes" <b>Attribut</b> gibt an, welche Bildgröße für verschiedene Bildschirmbreiten verwendet werden soll.
+    </p>
+
+    <ul>
+      <li>Der Browser wählt automatisch die passende Bildquelle basierend auf Bildschirmgröße und Auflösung.</li>
+      <li>Dies verbessert Ladezeit und Bildqualität.</li>
+      <li>Breiten-Deskriptoren (w) sind ideal für responsive Designs.</li>
+      <li>Auflösungs-Deskriptoren (x) sind ideal für feste Anzeigegrößen.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Lazy Loading</h2>
+    <p>
+      Lazy Loading lädt Bilder erst, wenn sie im sichtbaren Bereich erscheinen.
+    </p>
+    <img src="bild.jpg" alt="Beispiel für Lazy Loading" loading="lazy">
+    <ul>
+      <li>"loading=&quot;lazy&quot;" aktiviert Lazy Loading.</li>
+      <li>Eager: Bild wird sofort geladen.</li>
+      <li>Ohne Attribut entscheidet der Browser automatisch.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Videos in HTML einbinden</h2>
+    <ul>
+      <li>src: Gibt die URL des Videos an.</li>
+      <li>controls: Steuerelemente anzeigen.</li>
+      <li>autoplay: Startet automatisch.</li>
+      <li>loop: Wiederholt endlos.</li>
+      <li>width / height: Größe des Players.</li>
+      <li>poster: Standbild vor dem Abspielen.</li>
+      <li>muted: Startet stumm.</li>
+      <li>preload: auto, metadata, none.</li>
+    </ul>
+
+    <p>Beispiel:</p>
+    <video src="video.mp4" controls autoplay loop width="640" height="360" poster="video-poster.jpg" muted preload="auto">
+      Ihr Browser unterstützt das Video-Tag nicht.
+    </video>
+
+    <p>Beispiel mit mehreren Formaten:</p>
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+      <source src="video.webm" type="video/webm">
+      <source src="video.ogg" type="video/ogg">
+      Dein Browser unterstützt keine HTML5-Videos.
+    </video>
+
+    <p>Weitere Beispiele:</p>
+    <video src="video.webm" controls autoplay loop width="640" height="360" poster="video-poster.jpg" muted preload="auto">
+      .webm video
+    </video>
+
+    <video src="video.ogg" controls autoplay loop width="640" height="360" poster="video-poster.jpg" muted preload="auto">
+      .ogg video
+    </video>
+  </section>
+
+  <section>
+    <h2>Audio in HTML einbetten</h2>
+    <p>
+      Das HTML "audio" <b>Element</b> wird verwendet, um Audiodateien direkt in eine Webseite einzubinden.
+    </p>
+
+    <h3>Audio</h3>
+    <audio controls controlsList="nodownload">
+      <source src="https://storage01.dbe.academy/mp3.mp3" type="audio/mpeg">
+      Dein Browser unterstützt das Audio-Tag nicht.
+    </audio>
+
+    <ul>
+      <li>"audio": definiert ein <b>Audio-Element</b>.</li>
+      <li>"controls": fügt Steuerelemente hinzu.</li>
+      <li>"controlsList=&quot;nodownload&quot;": entfernt die Download-Option (nicht in allen Browsern gleich).</li>
+      <li>"source": definiert die Quelle und das Format.</li>
+    </ul>
+  </section>
+
+<footer id="footer">
+  <!-- Button zurück nach oben -->
+  <p>
+    <a href="#top">
+      <button>Nach oben</button>
+    </a>
+  </p>
+
+  <p>
+    © 2026 – Míriam Domínguez Martínez
+  </p>
+</footer>
+
+</body>
+</html>
